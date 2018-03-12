@@ -43,6 +43,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="WaterStyle">
+      <HintPath>C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WaterUI\WaterReferenceDLL\Style\WaterStyle.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -82,13 +85,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WaterStyle\WaterStyle.csproj">
-      <Project>{49a85314-6ec9-4d22-8b12-f08e5eebf7ea}</Project>
-      <Name>WaterStyle</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

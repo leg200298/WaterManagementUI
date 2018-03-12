@@ -32,19 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\WaterCollectionDLL\bin\Release\Library\MySQLEntityFramework\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\WaterCollectionDLL\bin\Release\Library\MySQLEntityFramework\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WaterCollectionDLL\bin\Release\Library\MySQLEntityFramework\MySql.Data.dll</HintPath>
+      <HintPath>C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WaterUI\WaterReferenceDLL\Library\MySQLEntityFramework\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WaterCollectionDLL\bin\Release\Library\MySQLEntityFramework\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WaterUI\WaterReferenceDLL\Library\MySQLEntityFramework\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,6 +50,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WaterStyle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WaterUI\WaterReferenceDLL\Style\WaterStyle.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -95,12 +93,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WaterStyle\WaterStyle.csproj">
-      <Project>{49a85314-6ec9-4d22-8b12-f08e5eebf7ea}</Project>
-      <Name>WaterStyle</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
