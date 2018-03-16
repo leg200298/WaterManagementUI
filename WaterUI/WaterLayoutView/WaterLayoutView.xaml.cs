@@ -36,7 +36,11 @@ namespace WaterLayoutView
             TabItemModel.Tabs = Tabs;
             ActionTabs.ItemsSource = Tabs;
         }
-
+        /// <summary>
+        /// 客戶管理子項目的按鈕觸發事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuUserButton_Click(object sender, RoutedEventArgs e)
         {
             Button menuItem = (Button)sender;
@@ -45,8 +49,9 @@ namespace WaterLayoutView
             var className = $"Water{menuItem.Name}";
             var dllFilePath = $@"{DynameicLoadingPath}Panel\UserPanel\{nameSpace}.dll";
 
-            var content = AssemblyUserPanel(menuItem, dllFilePath, nameSpace, className);
+            var content = AssemblyUserPanel(dllFilePath, nameSpace, className);
 
+            //標籤顯示處理
             var tabsItem = Tabs.SingleOrDefault(item => item.Header == menuItem.Content.ToString());
             if (tabsItem == null)
             {
@@ -58,11 +63,20 @@ namespace WaterLayoutView
                 ActionTabs.SelectedItem = tabsItem;
             }
         }
+        /// <summary>
+        /// 系統管理子項目的按鈕觸發事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuSystemButton_Click(object sender, RoutedEventArgs e)
         {
             
         }
-
+        /// <summary>
+        /// 不受關注的Expand會收起來
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Menu_Expanded(object sender, RoutedEventArgs e)
         {
             foreach (var item in MenuPanel.Children)
@@ -75,7 +89,14 @@ namespace WaterLayoutView
                 }
             }
         }
-        private UserControl AssemblyUserPanel(Button sender, string dllFilePath, string nameSpace, string className)
+        /// <summary>
+        /// 確定頁面檔案有存在在指定路徑
+        /// </summary>
+        /// <param name="dllFilePath"></param>
+        /// <param name="nameSpace"></param>
+        /// <param name="className"></param>
+        /// <returns></returns>
+        private UserControl AssemblyUserPanel(string dllFilePath, string nameSpace, string className)
         {
             if (File.Exists(dllFilePath))
             {
